@@ -1,3 +1,10 @@
+// 해당 플러그인은 Galv님이 제작한 것으로, 지도 UI를 통해 플레이어가 맵을 이곳저곳 다닐 수 있는 플러그인임
+// 내 프로젝트에서 인게임에서 플레이 테스트 할 때는 문제가 없으나, 배포 후 테스트 할 때는 지도 기능을 사용하면 플레이가 막히는 치명적인 오류가 발생함
+
+// 오류 내용: Cannot read property 'maps' of undefined
+// 오류 원인: 해당 지도 플러그인에 travelMaps라는 객체와 그 하위에 maps라는 객체가 있는데, 객체 초기화 없이 해당 객체를 참고할려고 해서 발생함
+// 해결 방법: 해당 객체를 참고하기 전에 객체 초기화를 선언함 → 코드 420~424번째 줄
+
 //-----------------------------------------------------------------------------
 //  Galv's Map Travel
 //-----------------------------------------------------------------------------
@@ -409,6 +416,7 @@ Galv.MAPT.bgfgArray = function(arrays) {
 
 
 Galv.MAPT.createMap = function(id,mapImage,backgrounds,foregrounds) {
+	// 객체 초기화 하기
 	if (!$gameSystem._travelMaps) {
    	 $gameSystem._travelMaps = { maps: {} };
 	} else if (!$gameSystem._travelMaps.maps) {
