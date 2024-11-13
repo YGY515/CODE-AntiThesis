@@ -1,3 +1,10 @@
+// 해당 플러그인은 Galv님이 오픈 소스로 제작한 것으로, 맵 상에서 이벤트(=오브젝트)를 원하는 대로 생성할 수 있게 해주는 플러그인임.
+// 내 프로젝트에서 인게임에서 플레이 테스트 할 때, 현재 플레이 중인 맵의 번호가 뜨며 플레이가 막히는 오류가 발생함.
+
+// 오류 내용: Cannot read property '맵 번호(ex. 55, 58...)' of undefined
+// 오류 원인: 새로운 맵이 로드되기도 전에 이전 객체에 할당된 값이 없어서 발생함함
+// 해결 방법: 해당 객체를 참고하기 전에 객체 초기화를 선언함 → 코드 336번째 줄
+
 //-----------------------------------------------------------------------------
 //  Galv's Event Spawner MZ
 //-----------------------------------------------------------------------------
@@ -326,6 +333,7 @@ Game_Map.prototype.initialize = function() {
 
 Galv.SPAWN.Game_Map_setup = Game_Map.prototype.setup;
 Game_Map.prototype.setup = function(mapId) {
+	this._savedSpawnedEvents = this._savedSpawnedEvents || {};	// 객체 초기화 하기
 	this._savedSpawnedEvents[mapId] = this._savedSpawnedEvents[mapId] || {};
 	Galv.SPAWN.Game_Map_setup.call(this,mapId);
 };
