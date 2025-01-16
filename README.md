@@ -20,3 +20,4 @@ RPG Maker 엔진에서 사용자가 원하는 기능을 구현하기 위해 다�
 
 ### <출시 링크><br>
 스토브: https://store.onstove.com/ko/games/4630
+<br> 현재 스팀 데모 출시 작업 중!
