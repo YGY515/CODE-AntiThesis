@@ -29,7 +29,7 @@ if (Utils.isNwjs()) {
     // 전체화면 종료 시 창 크기 조정 불가
     win.on('leave-fullscreen', function() {
         win.setResizable(false);
-        // 전체화면을 나왔을 때 창 크기를 초기 크기로 설정 (예: 1280x720)
+        // 전체화면을 나왔을 때 창 크기를 초기 크기로 설정
         win.resizeTo(1280, 720);
     });
 
