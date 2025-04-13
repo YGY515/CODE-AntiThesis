@@ -1,4 +1,4 @@
-# CODE-AntiThesis
+# CODE: AntiThesis
 ### 2024. 5~ 2024. 12 / 출시가 목표인 토이 프로젝트
 
 이 레포에는 개발에 사용한 플러그인 코드를 올리려고 함
@@ -18,6 +18,6 @@ RPG Maker 엔진에서 사용자가 원하는 기능을 구현하기 위해 다�
 
 
 
-### <출시 링크><br>
-스토브: https://store.onstove.com/ko/games/4630
+### <출시 링크>
+스토브: https://store.onstove.com/ko/games/4630 <br>
 스팀: https://store.steampowered.com/app/3473120/__Demo/
