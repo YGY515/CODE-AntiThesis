@@ -1,5 +1,5 @@
 # CODE: AntiThesis
-### 출시가 목표인 토이 프로젝트
+### 출시가 목표인 1인 개발 프로젝트
 <b>프로젝트 기간: 2024. 5~ 2024. 12</b>
 <br><br>
 <img width="90%" src="https://github.com/user-attachments/assets/30a07515-9a78-4565-8c65-37f2e954fc74">
